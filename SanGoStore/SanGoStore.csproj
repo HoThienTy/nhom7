@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6783EF6C-9E74-4FFF-AABD-3F89DE1114A1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SanGoStore</RootNamespace>
+    <AssemblyName>SanGoStore</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.3.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.3.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Admin\css\styles.css" />
+    <Content Include="Assets\Admin\js\datatables-simple-demo.js" />
+    <Content Include="Assets\Admin\js\scripts.js" />
+    <Content Include="Assets\Client\css\bootstrap.min.css" />
+    <Content Include="Assets\Client\css\elegant-icons.css" />
+    <Content Include="Assets\Client\css\font-awesome.min.css" />
+    <Content Include="Assets\Client\css\jquery-ui.min.css" />
+    <Content Include="Assets\Client\css\nice-select.css" />
+    <Content Include="Assets\Client\css\owl.carousel.min.css" />
+    <Content Include="Assets\Client\css\slicknav.min.css" />
+    <Content Include="Assets\Client\css\style.css" />
+    <Content Include="Assets\Client\fonts\ElegantIcons.svg" />
+    <Content Include="Assets\Client\fonts\fontawesome-webfont.svg" />
+    <Content Include="Assets\Client\js\bootstrap.min.js" />
+    <Content Include="Assets\Client\js\jquery-3.3.1.min.js" />
+    <Content Include="Assets\Client\js\jquery-ui.min.js" />
+    <Content Include="Assets\Client\js\jquery.nice-select.min.js" />
+    <Content Include="Assets\Client\js\jquery.slicknav.js" />
+    <Content Include="Assets\Client\js\main.js" />
+    <Content Include="Assets\Client\js\mixitup.min.js" />
+    <Content Include="Assets\Client\js\owl.carousel.min.js" />
+    <Content Include="Assets\Images\bannercontact.jpg" />
+    <Content Include="Assets\Images\bannerSanGo.jpg" />
+    <Content Include="Assets\Images\breadcrumb.jpg" />
+    <Content Include="Assets\Images\SanGoCamXeLao.jpg" />
+    <Content Include="Assets\Images\SanGoCamXeLaoSolid.jpg" />
+    <Content Include="Assets\Images\SanGoCamXeXuongCa.jpg" />
+    <Content Include="Assets\Images\SanGoChiuLiuHiem.jpg" />
+    <Content Include="Assets\Images\SanGoChiuLiuVIP.jpg" />
+    <Content Include="Assets\Images\SanGoChiuLiuXuongCa.jpg" />
+    <Content Include="Assets\Images\sangoLoGo.png" />
+    <Content Include="Assets\Images\SanGoSoiMy.jpg" />
+    <Content Include="Assets\Images\SanGoSoiMyLapKieuChauAu.jpg" />
+    <Content Include="Assets\Images\SanGoSoiXuongCa.jpg" />
+    <Content Include="Assets\Images\SanGoTeakLaoXuongCa.jpg" />
+    <Content Include="Assets\Images\SanGoTeakNgoaiTroi.jpg" />
+    <Content Include="Assets\Images\SanGoTramBongVang.jpg" />
+    <Content Include="Assets\Images\SanGoTramBongVangDocDao.jpg" />
+    <Content Include="Assets\Images\SanGoTramBongVangTuNhien.jpg" />
+    <Content Include="Assets\Images\SanGoTuNhienTeakLao.jpg" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NguoiDungController.cs" />
+    <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dbSanGoStoreDataContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSanGoStoreDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Assets\Client\fonts\ElegantIcons.eot" />
+    <Content Include="Assets\Client\fonts\ElegantIcons.ttf" />
+    <Content Include="Assets\Client\fonts\ElegantIcons.woff" />
+    <Content Include="Assets\Client\fonts\fontawesome-webfont.eot" />
+    <Content Include="Assets\Client\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Assets\Client\fonts\fontawesome-webfont.woff" />
+    <Content Include="Assets\Client\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Assets\Client\fonts\FontAwesome.otf" />
+    <Content Include="Views\Admin\ChiTietDH.cshtml" />
+    <Content Include="Views\Admin\ChiTietKH.cshtml" />
+    <Content Include="Views\Admin\ChiTietLoai.cshtml" />
+    <Content Include="Views\Admin\ChiTietSanPham.cshtml" />
+    <Content Include="Views\Admin\DonDatHang.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\KhachHang.cshtml" />
+    <Content Include="Views\Admin\Loai.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\SanPham.cshtml" />
+    <Content Include="Views\Admin\SuaDDH.cshtml" />
+    <Content Include="Views\Admin\SuaKH.cshtml" />
+    <Content Include="Views\Admin\SuaLoai.cshtml" />
+    <Content Include="Views\Admin\SuaSanPham.cshtml" />
+    <Content Include="Views\Admin\ThemLoai.cshtml" />
+    <Content Include="Views\Admin\ThemSanPham.cshtml" />
+    <Content Include="Views\Admin\XoaDDH.cshtml" />
+    <Content Include="Views\Admin\XoaKH.cshtml" />
+    <Content Include="Views\Admin\XoaLoai.cshtml" />
+    <Content Include="Views\Admin\XoaSanPham.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\GioHang\DatHang.cshtml" />
+    <Content Include="Views\GioHang\GioHang.cshtml" />
+    <Content Include="Views\GioHang\GioHangPartial.cshtml" />
+    <Content Include="Views\GioHang\XacNhanDonHang.cshtml" />
+    <Content Include="Views\Home\DanhMucSanPham.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\NguoiDung\DangKy.cshtml" />
+    <Content Include="Views\NguoiDung\DangNhap.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Shop\Details.cshtml" />
+    <Content Include="Views\Shop\Index.cshtml" />
+    <Content Include="Views\Shop\SanPhamTheoLoai.cshtml" />
+    <Content Include="Models\dbSanGoStoreDataContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>dbSanGoStoreDataContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\dbSanGoStoreDataContext.dbml.layout">
+      <DependentUpon>dbSanGoStoreDataContext.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6083</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:6083/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

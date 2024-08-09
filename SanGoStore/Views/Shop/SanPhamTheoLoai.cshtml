@@ -1,0 +1,82 @@
+﻿@model IEnumerable<sangostore.models.sanpham>
+    @{
+        ViewBag.Title = "SanPhamTheoLoai";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="/Assets/Images/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>San Go Store</h2>
+                        <div class="breadcrumb__option">
+                            <a href="@Url.Action("Index", "Home")">Trang chủ</a>
+                            <span>Danh mục sản phẩm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-5">
+                    <div class="sidebar">
+                        <div class="sidebar__item">
+                            <h4>Danh mục sản phẩm</h4>
+                            @Html.Action("DanhMucSanPham", "Home") <!-- Sửa từ ThucDon thành DanhMucSanPham -->
+                        </div>
+                        <div class="sidebar__item">
+                            <div class="latest-product__text">
+                                <h4>Cập nhật mới</h4>
+                                <div class="latest-product__slider owl-carousel">
+                                    @foreach (var sanpham in Model)
+                                    {
+                                        <div class="latest-product__slider__item">
+                                            <a href="@Url.Action("Details", "Shop", new { id = sanpham.MaSP })" class="latest-product__item">
+                                                <!-- Sửa từ monan thành sanpham và MaMon thành MaSP -->
+                                                <div class="latest-product__item__pic">
+                                                    <img src="@Url.Content("~/Assets/Images/" + sanpham.AnhDD)" alt="">
+                                                </div>
+                                                <div class="latest-product__item__text">
+                                                    <h6>@sanpham.TenSP</h6> <!-- Sửa từ TenMon thành TenSP -->
+                                                    <span>@sanpham.GiaBan</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-7">
+                    <div class="row">
+                        @foreach (var sanpham in Model)
+                        {
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="@Url.Content("~/Assets/Images/" + sanpham.AnhDD)">
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="@Url.Action("Details", "Shop", new { id = sanpham.MaSP })"><i class="fa fa-eye"></i></a></li> <!-- Sửa từ MaMon thành MaSP -->
+                                            <li><a href="@Url.Action("ThemGioHang", "GioHang", new { iMaMon = sanpham.MaSP, strURL = Request.Url.ToString() })"><i class="fa fa-shopping-cart"></i></a></li> <!-- Sửa từ MaMon thành MaSP -->
+                                        </ul>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h6><a href="#">@sanpham.TenSP</a></h6> <!-- Sửa từ TenMon thành TenSP -->
+                                        <h5>@sanpham.GiaBan vnđ</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Section End -->
